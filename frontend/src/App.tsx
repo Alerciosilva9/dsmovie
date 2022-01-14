@@ -4,8 +4,9 @@ import {
   Route
 } from "react-router-dom";
 
-//import Listing from './pages/Listing';
-//import Form from './pages/Form';
+
+import Listing from "pages/Listing";
+import Form from 'pages/Form';
 import Navbar from 'components/Navbar';
 
 function App() {
@@ -13,9 +14,9 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/"  />
+        <Route path="/" element={<Listing />} />
         <Route path="/form">
-          <Route path=":movieId"/>
+          <Route path=":movieId" element={<Form />} />
         </Route>
       </Routes>
     </BrowserRouter>
